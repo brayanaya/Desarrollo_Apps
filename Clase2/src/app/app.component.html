@@ -1,0 +1,11 @@
+<h1>{{ titulo }}</h1>
+
+<input type="text" [(ngModel)]="producto" placeholder="producto">
+<button (click)="agregar()">añadir</button>
+
+<ul>
+  <li *ngFor="let p of lista; let i = index">
+    {{ p }}
+    <button (click)="eliminar(i)">eliminar</button>
+  </li>
+</ul>

@@ -1,26 +1,25 @@
-const inputProducto = document.getElementById('entradaProducto');
-const botonAñadir = document.getElementById('btnAñadir');
-const listaProductos = document.getElementById('lista');
+let inputProducto = document.getElementById("entradaProducto");
+let botonAñadir = document.getElementById("btnAñadir");
+let listaProductos = document.getElementById("lista");
 
-botonAñadir.addEventListener('click', () => {
-    const texto = inputProducto.value.trim();
-    if (texto === '') return;
+botonAñadir.onclick = function() {
+    let texto = inputProducto.value;
+    if (texto == "") {
+        return;
+    }
 
-    const li = document.createElement('li');
-    li.textContent = texto;
+    let li = document.createElement("li");
+    li.innerText = texto;
 
-    // se crea el boton "eliminar"
-    const btnQuitar = document.createElement('button');
-    btnQuitar.textContent = 'Eliminar';
-    btnQuitar.style.marginLeft = '10px';
+    let btnQuitar = document.createElement("button");
+    btnQuitar.innerText = "Eliminar";
 
-    // accion del boton "eliminar"
-    btnQuitar.addEventListener('click', () => {
+    btnQuitar.onclick = function() {
         listaProductos.removeChild(li);
-    });
+    }
 
     li.appendChild(btnQuitar);
     listaProductos.appendChild(li);
 
-    inputProducto.value = '';
-});
+    inputProducto.value = "";
+}
