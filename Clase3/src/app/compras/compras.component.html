@@ -1,0 +1,9 @@
+<div class="container">
+  <h2>Lista de compras</h2>
+  <input type="text" [(ngModel)]="nuevaCompra" placeholder="Agregar compra">
+  <button (click)="agregarCompra()">Agregar</button>
+
+  <ul>
+    <li *ngFor="let item of compras">{{ item }}</li>
+  </ul>
+</div>
