@@ -1,23 +1,35 @@
 .container {
-  max-width: 500px;
-  margin: 40px auto;
+  max-width: 400px;
+  margin: 80px auto;
   text-align: center;
-  padding: 20px;
-  background: #fffde7;
+  padding: 30px;
+  background: #e0e0e0; /* Fondo ash */
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 15px;
+h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #333;
 }
 
-li {
-  background: #fff9c4;
-  margin: 5px 0;
-  padding: 8px;
-  border-radius: 5px;
-  text-align: left;
+button {
+  padding: 10px 20px;
+  background: #424242;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #212121;
+}
+
+.resultado {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #222;
 }
