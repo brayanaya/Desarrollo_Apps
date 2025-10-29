@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Slides (Swiper)</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h2>Swiper Slides Examples</h2>
+  
+  <p class="ion-padding">
+    Note: ion-slides was deprecated. Here's an example using native CSS for slide effects.
+  </p>
+
+  <ion-card *ngFor="let slide of slides; let i = index" [style.background-color]="slide.color">
+    <ion-card-header>
+      <ion-card-title>{{ slide.title }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ slide.content }}</p>
+      <ion-icon [name]="slide.icon" size="large"></ion-icon>
+    </ion-card-content>
+  </ion-card>
+
+  <div class="slide-controls ion-padding">
+    <ion-button (click)="previousSlide()" [disabled]="currentSlide === 0">
+      <ion-icon name="chevron-back"></ion-icon>
+      Previous
+    </ion-button>
+    <ion-button (click)="nextSlide()" [disabled]="currentSlide === slides.length - 1">
+      Next
+      <ion-icon name="chevron-forward"></ion-icon>
+    </ion-button>
+  </div>
+
+  <div class="ion-text-center ion-padding">
+    <p>Slide {{ currentSlide + 1 }} of {{ slides.length }}</p>
+  </div>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Swiper Integration</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>For advanced slide functionality, you can integrate Swiper.js directly:</p>
+      <ol>
+        <li>Install: npm install swiper</li>
+        <li>Import Swiper modules</li>
+        <li>Use swiper-container custom element</li>
+      </ol>
+      <a href="https://swiperjs.com/" target="_blank">Visit Swiper Documentation</a>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

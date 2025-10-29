@@ -1,0 +1,26 @@
+<ion-app>
+  <ion-menu side="start" menuId="main-menu" contentId="main-content">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Componentes</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-list-header>
+          <ion-label>Componentes</ion-label>
+        </ion-list-header>
+        <ion-item 
+          *ngFor="let component of componentsList" 
+          [routerLink]="component.url" 
+          routerDirection="root"
+          detail="true">
+          <ion-icon [name]="component.icon" slot="start"></ion-icon>
+          <ion-label>{{ component.title }}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main-content"></ion-router-outlet>
+</ion-app>

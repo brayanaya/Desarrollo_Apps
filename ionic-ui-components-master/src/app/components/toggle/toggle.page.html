@@ -1,0 +1,112 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Interruptores</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h2>Ejemplos de interruptores</h2>
+  
+  <ion-list>
+    <ion-item>
+      <ion-toggle [(ngModel)]="toggle1">Interruptor básico</ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-toggle [(ngModel)]="toggle2" checked="true">Activado por defecto</ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-toggle [(ngModel)]="toggle3" color="secondary">Color secundario</ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-toggle [(ngModel)]="toggle4" color="success">Color éxito</ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-toggle [(ngModel)]="toggle5" color="warning">Color advertencia</ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-toggle [(ngModel)]="toggle6" color="danger">Color peligro</ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-toggle disabled="true">Interruptor deshabilitado</ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-toggle [(ngModel)]="toggle7" disabled="true" checked="true">Deshabilitado activado</ion-toggle>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Interruptores con etiquetas</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+  <ion-label>Modo oscuro</ion-label>
+      <ion-toggle [(ngModel)]="darkMode" slot="end"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+  <ion-label>Notificaciones</ion-label>
+      <ion-toggle [(ngModel)]="notifications" slot="end" checked="true"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+  <ion-label>Sincronización automática</ion-label>
+      <ion-toggle [(ngModel)]="autoSync" slot="end"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+  <ion-label>Sólo Wi‑Fi</ion-label>
+      <ion-toggle [(ngModel)]="wifiOnly" slot="end" color="success"></ion-toggle>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Interruptores con descripciones</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>
+  <h2>Activar la función X</h2>
+  <p>Esto activará la función experimental</p>
+      </ion-label>
+      <ion-toggle [(ngModel)]="featureX" slot="end"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+  <h2>Servicios de ubicación</h2>
+  <p>Permitir que la app acceda a tu ubicación</p>
+      </ion-label>
+      <ion-toggle [(ngModel)]="location" slot="end" color="primary"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+  <h2>Actualización en segundo plano</h2>
+  <p>Actualizar contenido en segundo plano</p>
+      </ion-label>
+      <ion-toggle [(ngModel)]="backgroundRefresh" slot="end"></ion-toggle>
+    </ion-item>
+  </ion-list>
+
+    <div class="ion-padding">
+    <h3>Estados de los interruptores:</h3>
+    <p>Interruptor 1: {{ toggle1 }}</p>
+    <p>Interruptor 2: {{ toggle2 }}</p>
+    <p>Modo oscuro: {{ darkMode }}</p>
+    <p>Notificaciones: {{ notifications }}</p>
+    <p>Ubicación: {{ location }}</p>
+    <p>Actualización en segundo plano: {{ backgroundRefresh }}</p>
+  </div>
+</ion-content>

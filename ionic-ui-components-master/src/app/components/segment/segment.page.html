@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Segment</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h2>Segment Examples</h2>
+  
+  <ion-segment [(ngModel)]="selectedSegment">
+    <ion-segment-button value="friends">
+      <ion-label>Friends</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="enemies">
+      <ion-label>Enemies</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div class="segment-content ion-padding">
+    <div *ngIf="selectedSegment === 'friends'">
+      <h3>Friends</h3>
+      <p>Your friends list appears here.</p>
+    </div>
+    <div *ngIf="selectedSegment === 'enemies'">
+      <h3>Enemies</h3>
+      <p>Your enemies list appears here.</p>
+    </div>
+  </div>
+
+  <ion-segment [(ngModel)]="selectedView">
+    <ion-segment-button value="list">
+      <ion-icon name="list"></ion-icon>
+      <ion-label>List</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="grid">
+      <ion-icon name="grid"></ion-icon>
+      <ion-label>Grid</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="map">
+      <ion-icon name="map"></ion-icon>
+      <ion-label>Map</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div class="segment-content ion-padding">
+    <div *ngIf="selectedView === 'list'">
+      <ion-icon name="list" size="large"></ion-icon>
+      <p>List View</p>
+    </div>
+    <div *ngIf="selectedView === 'grid'">
+      <ion-icon name="grid" size="large"></ion-icon>
+      <p>Grid View</p>
+    </div>
+    <div *ngIf="selectedView === 'map'">
+      <ion-icon name="map" size="large"></ion-icon>
+      <p>Map View</p>
+    </div>
+  </div>
+
+  <ion-segment [(ngModel)]="selectedColor" color="secondary">
+    <ion-segment-button value="camera">
+      <ion-icon name="camera"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="bookmark">
+      <ion-icon name="bookmark"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="heart">
+      <ion-icon name="heart"></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div class="segment-content ion-padding">
+    <p>Selected: {{ selectedColor }}</p>
+  </div>
+
+  <ion-segment [(ngModel)]="selectedMode" mode="ios">
+    <ion-segment-button value="ios">
+      <ion-label>iOS Style</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="md">
+      <ion-label>Material Design</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+</ion-content>

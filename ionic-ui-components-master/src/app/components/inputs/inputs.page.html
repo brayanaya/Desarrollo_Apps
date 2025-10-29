@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Inputs</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h2>Input Examples</h2>
+  
+  <ion-list>
+    <ion-item>
+      <ion-input label="Text Input" placeholder="Enter text" [(ngModel)]="textInput"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Email" type="email" placeholder="email@example.com" [(ngModel)]="emailInput"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Password" type="password" placeholder="Password" [(ngModel)]="passwordInput"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Number" type="number" placeholder="0" [(ngModel)]="numberInput"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Telephone" type="tel" placeholder="555-5555" [(ngModel)]="telInput"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="URL" type="url" placeholder="https://ionicframework.com" [(ngModel)]="urlInput"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-textarea label="Textarea" placeholder="Enter long text" rows="4" [(ngModel)]="textareaInput"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Disabled Input" disabled="true" value="Disabled"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Readonly Input" readonly="true" value="Readonly"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Clear Input" clearInput="true" placeholder="Can be cleared" [(ngModel)]="clearInput"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <div class="ion-padding">
+    <h3>Values:</h3>
+    <p>Text: {{ textInput }}</p>
+    <p>Email: {{ emailInput }}</p>
+    <p>Number: {{ numberInput }}</p>
+  </div>
+</ion-content>

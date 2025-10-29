@@ -1,0 +1,347 @@
+// Variables globales
+:root {
+  --color-primario: #4f46e5;
+  --color-secundario: #6366f1;
+  --color-fondo: #f8fafc;
+  --color-texto: #22223b;
+  --sombra-suave: 0 2px 8px rgba(79, 70, 229, 0.08);
+  --sombra-media: 0 4px 16px rgba(79, 70, 229, 0.12);
+  --borde-radio: 1rem;
+}
+
+// Estilos del contenedor principal
+.contenedor-principal {
+  display: block;
+  min-height: 100vh;
+  background: var(--color-fondo);
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  color: var(--color-texto);
+}
+
+// Encabezado
+.encabezado {
+  background: var(--color-primario);
+  color: white;
+  padding: 1.5rem 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+  box-shadow: var(--sombra-suave);
+  border-radius: 0 0 var(--borde-radio) var(--borde-radio);
+  text-align: center;
+}
+
+// Contenido principal
+.contenido {
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: var(--borde-radio);
+  box-shadow: var(--sombra-media);
+  max-width: 900px;
+}
+
+// Pie de página
+.pie-pagina {
+  text-align: center;
+  padding: 1rem;
+  color: var(--color-primario);
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+
+// Botones
+.boton-principal {
+  background: linear-gradient(90deg, var(--color-primario) 0%, var(--color-secundario) 100%);
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-media);
+  }
+}
+
+// Tarjetas
+.tarjeta {
+  background: white;
+  border-radius: var(--borde-radio);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--sombra-suave);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-media);
+  }
+}
+
+// Campos de entrada
+.campo-entrada {
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+
+  &:focus {
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+    outline: none;
+  }
+}
+
+// Alertas
+.alerta {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+
+  &.exito {
+    background: #dcfce7;
+    color: #166534;
+    border: 1px solid #86efac;
+  }
+
+  &.error {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+  }
+
+  &.info {
+    background: #dbeafe;
+    color: #1e40af;
+    border: 1px solid #93c5fd;
+  }
+}
+
+// Lista de elementos
+.lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  .elemento-lista {
+    padding: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      background: #f8fafc;
+    }
+  }
+}
+
+// Etiquetas
+.etiqueta {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-right: 0.5rem;
+
+  &.primaria {
+    background: var(--color-primario);
+    color: white;
+  }
+
+  &.secundaria {
+    background: #e2e8f0;
+    color: #475569;
+  }
+}
+
+// Elementos de carga
+.cargando {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+
+  .spinner {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid var(--color-primario);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: girar 1s linear infinite;
+  }
+}
+
+@keyframes girar {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+// Menú de navegación
+.menu-navegacion {
+  background: white;
+  padding: 1rem;
+  border-radius: var(--borde-radio);
+  box-shadow: var(--sombra-suave);
+
+  .enlace-menu {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: var(--color-texto);
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: var(--color-fondo);
+      color: var(--color-primario);
+    }
+
+    &.activo {
+      background: var(--color-primario);
+      color: white;
+    }
+  }
+}
+
+// Elementos de formulario
+.grupo-formulario {
+  margin-bottom: 1.5rem;
+
+  .etiqueta-campo {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--color-texto);
+  }
+
+  .mensaje-error {
+    color: #dc2626;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .contenido {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .encabezado {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+
+  .boton-principal {
+    width: 100%;
+  }
+}
+
+/* --------------------------------------------------------- */
+/* Estilos dirigidos a los elementos de app.component.html    */
+/* --------------------------------------------------------- */
+
+/* Aplicar fondo y tipografía al ion-app si se quiere afectar todo */
+ion-app {
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  color: var(--color-texto);
+  background: var(--color-fondo);
+}
+
+/* Menú lateral (ion-menu) */
+ion-menu {
+  --width: 300px;
+  /* fondo oscuro para el menú lateral */
+  --background: #0b1220; /* azul muy oscuro / near-black */
+  color: #e6eef8;
+
+  ion-header ion-toolbar {
+    background: linear-gradient(90deg, var(--color-primario), var(--color-secundario));
+    color: #fff;
+    box-shadow: var(--sombra-suave);
+  }
+
+  ion-content {
+    padding: 0.75rem;
+    --background: transparent;
+  }
+
+  ion-list {
+    margin-top: 0.5rem;
+  }
+
+  /* Items del menú: fondo transparente para dejar ver el menú oscuro y texto claro */
+  ion-item {
+    --background: transparent;
+    --color: #e6eef8; /* color del texto dentro del item */
+    border-radius: 0.5rem;
+    margin: 0.25rem 0;
+    padding: 0.5rem 0.75rem;
+    align-items: center;
+    transition: background 0.12s ease, transform 0.12s ease;
+  }
+
+  ion-item:hover {
+    background: rgba(255,255,255,0.03);
+    transform: translateY(-2px);
+  }
+
+  /* Item activo/seleccionado */
+  ion-item.activated, ion-item[activated], ion-item[selected] {
+    background: linear-gradient(90deg, rgba(79,70,229,0.12), rgba(99,102,241,0.08));
+    --color: white;
+    box-shadow: var(--sombra-suave);
+  }
+
+  ion-icon {
+    color: var(--color-secundario);
+    font-size: 1.2rem;
+    margin-right: 0.6rem;
+  }
+
+  ion-label {
+    font-weight: 600;
+    color: #e6eef8; /* forzar color legible */
+    font-size: 0.95rem;
+  }
+}
+
+/* Título del toolbar (ion-title) */
+ion-toolbar ion-title {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+/* Estilo para el contenido principal donde se renderiza el router */
+ion-router-outlet#main-content {
+  display: block;
+  padding: 1.25rem;
+  /* Asegurar fondo claro para el contenido principal para evitar área negra */
+  background: #ffffff;
+  color: var(--color-texto);
+  min-height: calc(100vh - 56px);
+}
+
+/* Pequeños ajustes responsivos para elementos ionic dentro del app */
+@media (max-width: 600px) {
+  ion-menu {
+    --width: 240px;
+  }
+
+  ion-item {
+    padding: 0.5rem 0.6rem;
+  }
+}

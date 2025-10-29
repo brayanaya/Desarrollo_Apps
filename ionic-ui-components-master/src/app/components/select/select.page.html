@@ -1,0 +1,95 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Select</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h2>Select Examples</h2>
+  
+  <ion-list>
+    <ion-item>
+      <ion-select label="Single Selection" [(ngModel)]="singleSelect">
+        <ion-select-option value="apple">Apple</ion-select-option>
+        <ion-select-option value="banana">Banana</ion-select-option>
+        <ion-select-option value="orange">Orange</ion-select-option>
+        <ion-select-option value="grape">Grape</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-select label="Multiple Selection" [(ngModel)]="multipleSelect" multiple="true">
+        <ion-select-option value="red">Red</ion-select-option>
+        <ion-select-option value="green">Green</ion-select-option>
+        <ion-select-option value="blue">Blue</ion-select-option>
+        <ion-select-option value="yellow">Yellow</ion-select-option>
+        <ion-select-option value="purple">Purple</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-select label="Custom Interface" [(ngModel)]="actionSheetSelect" interface="action-sheet">
+        <ion-select-option value="1">Option 1</ion-select-option>
+        <ion-select-option value="2">Option 2</ion-select-option>
+        <ion-select-option value="3">Option 3</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-select label="Alert Interface" [(ngModel)]="alertSelect" interface="alert">
+        <ion-select-option value="a">Choice A</ion-select-option>
+        <ion-select-option value="b">Choice B</ion-select-option>
+        <ion-select-option value="c">Choice C</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-select label="Popover Interface" [(ngModel)]="popoverSelect" interface="popover">
+        <ion-select-option value="small">Small</ion-select-option>
+        <ion-select-option value="medium">Medium</ion-select-option>
+        <ion-select-option value="large">Large</ion-select-option>
+        <ion-select-option value="xlarge">X-Large</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-select 
+        label="Custom Text" 
+        [(ngModel)]="customTextSelect"
+        okText="Confirm"
+        cancelText="Dismiss">
+        <ion-select-option value="1">Item 1</ion-select-option>
+        <ion-select-option value="2">Item 2</ion-select-option>
+        <ion-select-option value="3">Item 3</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-select label="With Placeholder" placeholder="Select a country" [(ngModel)]="countrySelect">
+        <ion-select-option value="us">United States</ion-select-option>
+        <ion-select-option value="mx">Mexico</ion-select-option>
+        <ion-select-option value="ca">Canada</ion-select-option>
+        <ion-select-option value="co">Colombia</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-select label="Disabled Select" disabled="true">
+        <ion-select-option value="disabled">Disabled Option</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <div class="ion-padding">
+    <h3>Selected Values:</h3>
+    <p>Single: {{ singleSelect }}</p>
+    <p>Multiple: {{ multipleSelect | json }}</p>
+    <p>Action Sheet: {{ actionSheetSelect }}</p>
+    <p>Alert: {{ alertSelect }}</p>
+    <p>Popover: {{ popoverSelect }}</p>
+    <p>Country: {{ countrySelect }}</p>
+  </div>
+</ion-content>

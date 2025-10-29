@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Popover</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h2>Popover Examples</h2>
+  
+  <ion-button expand="block" (click)="openPopover($event)">
+    Open Basic Popover
+  </ion-button>
+  
+  <ion-button expand="block" (click)="openPopoverWithList($event)">
+    Open Popover with List
+  </ion-button>
+  
+  <ion-button expand="block" (click)="openPopoverAligned($event, 'start')">
+    Open Popover (Start)
+  </ion-button>
+  
+  <ion-button expand="block" (click)="openPopoverAligned($event, 'end')">
+    Open Popover (End)
+  </ion-button>
+
+  <div class="ion-padding" *ngIf="popoverResult">
+    <h3>Popover Result:</h3>
+    <p>{{ popoverResult }}</p>
+  </div>
+</ion-content>

@@ -1,0 +1,102 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Radio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h2>Radio Examples</h2>
+  
+  <ion-list>
+    <ion-radio-group [(ngModel)]="selectedOption">
+      <ion-list-header>
+        <ion-label>Select an option</ion-label>
+      </ion-list-header>
+
+      <ion-item>
+        <ion-radio value="option1">Option 1</ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-radio value="option2">Option 2</ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-radio value="option3">Option 3</ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+
+  <ion-list>
+    <ion-radio-group [(ngModel)]="selectedColor">
+      <ion-list-header>
+        <ion-label>Color Options</ion-label>
+      </ion-list-header>
+
+      <ion-item>
+        <ion-radio value="primary" color="primary">Primary</ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-radio value="secondary" color="secondary">Secondary</ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-radio value="success" color="success">Success</ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-radio value="warning" color="warning">Warning</ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-radio value="danger" color="danger">Danger</ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+
+  <ion-list>
+    <ion-radio-group [(ngModel)]="selectedSize">
+      <ion-list-header>
+        <ion-label>Size Selection</ion-label>
+      </ion-list-header>
+
+      <ion-item>
+        <ion-radio value="small">
+          <ion-label>
+            <h2>Small</h2>
+            <p>Perfect for compact spaces</p>
+          </ion-label>
+        </ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-radio value="medium">
+          <ion-label>
+            <h2>Medium</h2>
+            <p>Most popular choice</p>
+          </ion-label>
+        </ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-radio value="large">
+          <ion-label>
+            <h2>Large</h2>
+            <p>Maximum capacity</p>
+          </ion-label>
+        </ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+
+  <div class="ion-padding">
+    <h3>Selected Values:</h3>
+    <p>Option: {{ selectedOption }}</p>
+    <p>Color: {{ selectedColor }}</p>
+    <p>Size: {{ selectedSize }}</p>
+  </div>
+</ion-content>

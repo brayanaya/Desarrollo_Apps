@@ -1,0 +1,122 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Tabs</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="home" (click)="selectedTab = 'home'">
+        <ion-icon name="home"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="search" (click)="selectedTab = 'search'">
+        <ion-icon name="search"></ion-icon>
+        <ion-label>Search</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="notifications" (click)="selectedTab = 'notifications'">
+        <ion-icon name="notifications"></ion-icon>
+        <ion-label>Notifications</ion-label>
+        <ion-badge color="danger">5</ion-badge>
+      </ion-tab-button>
+
+      <ion-tab-button tab="settings" (click)="selectedTab = 'settings'">
+        <ion-icon name="settings"></ion-icon>
+        <ion-label>Settings</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+
+    <ion-tab tab="home">
+      <div class="tab-content ion-padding">
+        <h2>Home Tab</h2>
+        <p>Welcome to the home tab content.</p>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Home Content</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            This is the content for the home tab.
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </ion-tab>
+
+    <ion-tab tab="search">
+      <div class="tab-content ion-padding">
+        <h2>Search Tab</h2>
+        <ion-searchbar placeholder="Search here"></ion-searchbar>
+        <ion-list>
+          <ion-item>
+            <ion-label>Search Result 1</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>Search Result 2</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label>Search Result 3</ion-label>
+          </ion-item>
+        </ion-list>
+      </div>
+    </ion-tab>
+
+    <ion-tab tab="notifications">
+      <div class="tab-content ion-padding">
+        <h2>Notifications Tab</h2>
+        <ion-list>
+          <ion-item>
+            <ion-icon name="mail" slot="start"></ion-icon>
+            <ion-label>
+              <h3>New Message</h3>
+              <p>You have a new message</p>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="heart" slot="start" color="danger"></ion-icon>
+            <ion-label>
+              <h3>New Like</h3>
+              <p>Someone liked your post</p>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="person-add" slot="start" color="primary"></ion-icon>
+            <ion-label>
+              <h3>New Follower</h3>
+              <p>You have a new follower</p>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </div>
+    </ion-tab>
+
+    <ion-tab tab="settings">
+      <div class="tab-content ion-padding">
+        <h2>Settings Tab</h2>
+        <ion-list>
+          <ion-item>
+            <ion-label>Dark Mode</ion-label>
+            <ion-toggle></ion-toggle>
+          </ion-item>
+          <ion-item>
+            <ion-label>Notifications</ion-label>
+            <ion-toggle checked="true"></ion-toggle>
+          </ion-item>
+          <ion-item button>
+            <ion-label>Account Settings</ion-label>
+          </ion-item>
+          <ion-item button>
+            <ion-label>Privacy</ion-label>
+          </ion-item>
+          <ion-item button>
+            <ion-label>About</ion-label>
+          </ion-item>
+        </ion-list>
+      </div>
+    </ion-tab>
+  </ion-tabs>
+</ion-content>

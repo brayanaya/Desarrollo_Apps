@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Modals</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h2>Modal Examples</h2>
+  
+  <ion-button expand="block" (click)="openBasicModal()">
+    Open Basic Modal
+  </ion-button>
+  
+  <ion-button expand="block" (click)="openModalWithData()">
+    Open Modal with Data
+  </ion-button>
+  
+  <ion-button expand="block" (click)="openFullscreenModal()">
+    Open Fullscreen Modal
+  </ion-button>
+  
+  <ion-button expand="block" (click)="openCardModal()">
+    Open Card Modal
+  </ion-button>
+
+  <div class="ion-padding" *ngIf="modalResult">
+    <h3>Modal Result:</h3>
+    <p>{{ modalResult }}</p>
+  </div>
+</ion-content>
