@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Loading</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h2>Loading Examples</h2>
+  
+  <ion-button expand="block" (click)="showBasicLoading()">
+    Basic Loading
+  </ion-button>
+  
+  <ion-button expand="block" (click)="showLoadingWithMessage()">
+    Loading with Message
+  </ion-button>
+  
+  <ion-button expand="block" (click)="showLoadingWithDuration()">
+    Loading with Duration (3s)
+  </ion-button>
+  
+  <ion-button expand="block" (click)="showLoadingWithBackdrop()">
+    Loading without Backdrop
+  </ion-button>
+  
+  <ion-button expand="block" (click)="showCustomSpinner()">
+    Custom Spinner
+  </ion-button>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Inline Spinners</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="spinner-container">
+        <ion-spinner name="lines"></ion-spinner>
+        <ion-spinner name="dots"></ion-spinner>
+        <ion-spinner name="circles"></ion-spinner>
+        <ion-spinner name="crescent"></ion-spinner>
+        <ion-spinner name="bubbles"></ion-spinner>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

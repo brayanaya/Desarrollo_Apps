@@ -1,0 +1,22 @@
+ion-card {
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  
+  ion-icon {
+    margin-top: 20px;
+  }
+}
+
+.slide-controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  
+  ion-button {
+    flex: 1;
+  }
+}

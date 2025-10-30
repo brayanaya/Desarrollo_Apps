@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Checkboxes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h2>Checkbox Examples</h2>
+  
+  <ion-list>
+    <ion-item>
+      <ion-checkbox [(ngModel)]="checkbox1">Default Checkbox</ion-checkbox>
+    </ion-item>
+    
+    <ion-item>
+      <ion-checkbox [(ngModel)]="checkbox2" color="primary">Primary Color</ion-checkbox>
+    </ion-item>
+    
+    <ion-item>
+      <ion-checkbox [(ngModel)]="checkbox3" color="secondary">Secondary Color</ion-checkbox>
+    </ion-item>
+    
+    <ion-item>
+      <ion-checkbox [(ngModel)]="checkbox4" color="success">Success Color</ion-checkbox>
+    </ion-item>
+    
+    <ion-item>
+      <ion-checkbox [(ngModel)]="checkbox5" disabled="true">Disabled Checkbox</ion-checkbox>
+    </ion-item>
+    
+    <ion-item>
+      <ion-checkbox [(ngModel)]="checkbox6" indeterminate="true">Indeterminate</ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+  <div class="ion-padding">
+    <h3>Selected Values:</h3>
+    <p>Checkbox 1: {{ checkbox1 }}</p>
+    <p>Checkbox 2: {{ checkbox2 }}</p>
+    <p>Checkbox 3: {{ checkbox3 }}</p>
+    <p>Checkbox 4: {{ checkbox4 }}</p>
+  </div>
+</ion-content>

@@ -1,0 +1,99 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Range</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h2>Range Examples</h2>
+  
+  <ion-list>
+    <ion-item>
+      <ion-range [(ngModel)]="basicRange">
+        <ion-label slot="start">Basic Range</ion-label>
+      </ion-range>
+    </ion-item>
+
+    <ion-item>
+      <ion-range [(ngModel)]="volumeRange" [min]="0" [max]="100">
+        <ion-icon name="volume-low" slot="start"></ion-icon>
+        <ion-icon name="volume-high" slot="end"></ion-icon>
+      </ion-range>
+    </ion-item>
+
+    <ion-item>
+      <ion-range 
+        [(ngModel)]="brightnessRange" 
+        [min]="0" 
+        [max]="100" 
+        [step]="10"
+        [snaps]="true"
+        [ticks]="true">
+        <ion-label slot="start">Brightness</ion-label>
+      </ion-range>
+    </ion-item>
+
+    <ion-item>
+      <ion-range 
+        [(ngModel)]="colorRange" 
+        color="secondary"
+        [min]="0" 
+        [max]="100">
+        <ion-label slot="start">Colored Range</ion-label>
+      </ion-range>
+    </ion-item>
+
+    <ion-item>
+      <ion-range 
+        [(ngModel)]="temperatureRange" 
+        color="danger"
+        [min]="-10" 
+        [max]="40">
+        <ion-label slot="start">-10°C</ion-label>
+        <ion-label slot="end">40°C</ion-label>
+      </ion-range>
+    </ion-item>
+
+    <ion-item>
+      <ion-range 
+        [(ngModel)]="pinRange" 
+        [pin]="true"
+        [min]="0" 
+        [max]="100">
+        <ion-label slot="start">Range with Pin</ion-label>
+      </ion-range>
+    </ion-item>
+
+    <ion-item>
+      <ion-range 
+        dualKnobs="true"
+        [(ngModel)]="dualRange"
+        [min]="0" 
+        [max]="100">
+        <ion-label slot="start">Dual Knobs</ion-label>
+      </ion-range>
+    </ion-item>
+
+    <ion-item>
+      <ion-range 
+        [(ngModel)]="disabledRange"
+        disabled="true">
+        <ion-label slot="start">Disabled</ion-label>
+      </ion-range>
+    </ion-item>
+  </ion-list>
+
+  <div class="ion-padding">
+    <h3>Values:</h3>
+    <p>Basic: {{ basicRange }}</p>
+    <p>Volume: {{ volumeRange }}</p>
+    <p>Brightness: {{ brightnessRange }}</p>
+    <p>Color: {{ colorRange }}</p>
+    <p>Temperature: {{ temperatureRange }}°C</p>
+    <p>Pin: {{ pinRange }}</p>
+    <p>Dual: {{ dualRange | json }}</p>
+  </div>
+</ion-content>

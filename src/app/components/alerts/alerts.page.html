@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Alertas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h2>Ejemplos de alertas</h2>
+  
+  <ion-button expand="block" (click)="presentBasicAlert()">
+    Alerta básica
+  </ion-button>
+  
+  <ion-button expand="block" (click)="presentConfirmAlert()">
+    Alerta de confirmación
+  </ion-button>
+  
+  <ion-button expand="block" (click)="presentPromptAlert()">
+    Alerta con entrada
+  </ion-button>
+  
+  <ion-button expand="block" (click)="presentRadioAlert()">
+    Alerta de opción
+  </ion-button>
+  
+  <ion-button expand="block" (click)="presentCheckboxAlert()">
+    Alerta con casillas
+  </ion-button>
+</ion-content>

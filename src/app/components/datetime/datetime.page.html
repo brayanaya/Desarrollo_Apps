@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>DateTime</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h2>DateTime Examples</h2>
+  
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Date Picker</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-datetime [(ngModel)]="selectedDate" presentation="date"></ion-datetime>
+      <p *ngIf="selectedDate">Selected: {{ selectedDate }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Time Picker</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-datetime [(ngModel)]="selectedTime" presentation="time"></ion-datetime>
+      <p *ngIf="selectedTime">Selected: {{ selectedTime }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Date & Time Picker</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-datetime [(ngModel)]="selectedDateTime"></ion-datetime>
+      <p *ngIf="selectedDateTime">Selected: {{ selectedDateTime }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Month/Year Picker</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-datetime [(ngModel)]="selectedMonth" presentation="month-year"></ion-datetime>
+      <p *ngIf="selectedMonth">Selected: {{ selectedMonth }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

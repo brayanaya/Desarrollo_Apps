@@ -1,0 +1,7 @@
+{
+  "name": "Ionic UI Components",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

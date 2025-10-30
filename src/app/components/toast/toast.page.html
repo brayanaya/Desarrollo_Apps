@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Toast</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h2>Toast Examples</h2>
+  
+  <ion-button expand="block" (click)="showBasicToast()">
+    Basic Toast
+  </ion-button>
+  
+  <ion-button expand="block" (click)="showToastWithDuration()">
+    Toast with Duration (5s)
+  </ion-button>
+  
+  <ion-button expand="block" (click)="showToastWithButton()">
+    Toast with Close Button
+  </ion-button>
+  
+  <ion-button expand="block" (click)="showToastTop()">
+    Toast at Top
+  </ion-button>
+  
+  <ion-button expand="block" (click)="showToastMiddle()">
+    Toast at Middle
+  </ion-button>
+  
+  <ion-button expand="block" (click)="showSuccessToast()">
+    Success Toast
+  </ion-button>
+  
+  <ion-button expand="block" (click)="showWarningToast()">
+    Warning Toast
+  </ion-button>
+  
+  <ion-button expand="block" (click)="showErrorToast()">
+    Error Toast
+  </ion-button>
+  
+  <ion-button expand="block" (click)="showToastWithIcon()">
+    Toast with Icon
+  </ion-button>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Toast Info</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Toasts are subtle notifications that appear temporarily on the screen.</p>
+      <ul>
+        <li>Non-intrusive</li>
+        <li>Auto-dismiss</li>
+        <li>Can be positioned anywhere</li>
+        <li>Support custom colors and icons</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

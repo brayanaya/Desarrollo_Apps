@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>FAB (Floating Action Button)</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h2>FAB Examples</h2>
+  
+  <p>Floating Action Buttons appear in different positions on the screen.</p>
+  
+  <ion-card>
+    <ion-card-content>
+      Scroll down to see more FAB examples positioned around the screen.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngFor="let item of [1,2,3,4,5,6,7,8]">
+    <ion-card-header>
+      <ion-card-title>Card {{ item }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Content for card number {{ item }}
+    </ion-card-content>
+  </ion-card>
+
+  <!-- FAB positioned at bottom right -->
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button (click)="showMessage('Main FAB clicked')">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <!-- FAB with list -->
+  <ion-fab slot="fixed" vertical="top" horizontal="end">
+    <ion-fab-button>
+      <ion-icon name="share-social"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="bottom">
+      <ion-fab-button (click)="showMessage('Facebook')">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button (click)="showMessage('Twitter')">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button (click)="showMessage('Instagram')">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>
